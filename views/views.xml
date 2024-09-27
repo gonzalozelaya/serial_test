@@ -1,0 +1,17 @@
+<odoo>
+    <record id="view_order_form_inherit_button" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.button</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Ubicar el botón después del botón de Confirmar -->
+            <xpath expr="//header/button[@name='action_confirm']" position="after">
+                <button name="your_method_name"
+                        string="Your Button"
+                        type="object"
+                        class="btn-primary"
+                        icon="fa-check"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
